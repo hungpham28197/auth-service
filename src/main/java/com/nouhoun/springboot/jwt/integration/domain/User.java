@@ -5,9 +5,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
 import java.util.List;
 
-/**
- * Created by nydiarra on 06/05/17.
- */
 @Entity
 @Table(name = "app_user")
 public class User {
@@ -23,11 +20,11 @@ public class User {
     @JsonIgnore
     private String password;
 
-    @Column(name = "first_name")
-    private String firstName;
+    @Column(name = "email")
+    private String email;
 
-    @Column(name = "last_name")
-    private String lastName;
+    @Column(name = "phone_number")
+    private String phoneNumber;
 
     /**
      * Roles are being eagerly loaded here because
@@ -65,20 +62,20 @@ public class User {
         this.password = password;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getEmail() {
+        return email;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public List<Role> getRoles() {

@@ -29,7 +29,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
                 .requestMatchers()
                 .and()
                 .authorizeRequests()
-                .antMatchers("/actuator/**", "/api-docs/**").permitAll()
-                .antMatchers("/springjwt/**" ).authenticated();
+                .antMatchers("/nguon-hang-24h-auth/actuator/**").permitAll()
+                .antMatchers("/nguon-hang-24h-auth/users/sale/**", "/nguon-hang-24h-auth/users/admin/**" ).authenticated();
     }
 }
